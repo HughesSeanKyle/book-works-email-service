@@ -1,5 +1,0 @@
-{
-	"env": {
-		"ALLOWED_ORIGINS": "https://bookworks-4fa23.firebaseapp,http://localhost:3000"
-	}
-}
