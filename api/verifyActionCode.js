@@ -10,6 +10,7 @@ export default async function verifyActionCode(req, res) {
 		const whitelist = [
 			process.env.WHITELISTED_DOMAIN_ONE,
 			process.env.WHITELISTED_DOMAIN_TWO,
+			process.env.WHITELISTED_DOMAIN_THREE,
 		];
 		const origin = req.headers.origin;
 
