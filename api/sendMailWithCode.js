@@ -7,7 +7,10 @@ export default async function sendMailWithCode(req, res) {
 	try {
 		const { recipient, message } = req.body;
 
-		const whitelist = [WHITELISTED_DOMAIN_ONE, WHITELISTED_DOMAIN_TWO];
+		const whitelist = [
+			process.env.WHITELISTED_DOMAIN_ONE,
+			process.env.WHITELISTED_DOMAIN_TWO,
+		];
 		const origin = req.headers.origin;
 
 		if (!whitelist.includes(origin)) {

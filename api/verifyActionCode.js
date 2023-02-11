@@ -1,10 +1,16 @@
 import { verifyCode } from 'email-verification-code';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 export default async function verifyActionCode(req, res) {
 	try {
 		const { email, code } = req.body;
 
-		const whitelist = [WHITELISTED_DOMAIN_ONE, WHITELISTED_DOMAIN_TWO];
+		const whitelist = [
+			process.env.WHITELISTED_DOMAIN_ONE,
+			process.env.WHITELISTED_DOMAIN_TWO,
+		];
 		const origin = req.headers.origin;
 
 		if (!whitelist.includes(origin)) {
