@@ -25,13 +25,6 @@ Update: 10/02 - Vercel offers FaaS (Functions as a Service) - Use
 
 
 
-<!-- DELETE THIS 10/02
-    - Refactor code to use import statements 
-    - Test if they work by running through node 
-    - Then deploy
-    - Follow this structure https://blog.logrocket.com/serverless-deployments-vercel-node-js/
-
- -->
 
 
 
