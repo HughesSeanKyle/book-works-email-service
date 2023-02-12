@@ -23,20 +23,3 @@ NOTE: 12/02 - Opted to use regular express server and deploy to Vercel. Better d
 
 5. May need to set CORS 
 - More info [`here`](https://vercel.com/knowledge/how-to-enable-cors?query=cors#understanding-cors)
-
-
-
-<<<<<<< HEAD
-=======
-<!-- DELETE THIS 10/02
-    - TRY THIS FIRST 
-        - HERE IS AN EXAMPLE OF A SERVERLESS FUNCTION IMPLEMENTATION => https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel - NODE + EXPRESS ASWELL => BENEFIT => CAN TEST LOCALLY WITH node index
-
-    -BUILD A REGULAR EXPRESS APP ON A BRANCH CALLED DEPLOY, TEST LOCALLY, THEN DEPLOY TO VERCEL. HERE IS AN EXAMPLE => https://dev.to/andrewbaisden/how-to-deploy-a-node-express-app-to-vercel-2aa. 
-
- -->
->>>>>>> b8d984680b0f55d5a637a176be743b634b1413d6
-
-
-
-
