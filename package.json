@@ -8,7 +8,7 @@
 		"start": "nodemon index.js"
 	},
 	"keywords": [],
-	"author": "",
+	"author": "Kyle Sean Hughes",
 	"license": "MIT",
 	"dependencies": {
 		"cors": "^2.8.5",
