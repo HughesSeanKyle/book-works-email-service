@@ -2,6 +2,7 @@
 Spark plan (Firebase) no longer offers cloud functions as a service. However, stick to microservice architecture, create this service and deploy with render. Only issue os that you will not have auto scalling and all the great features that come with serverless functions.
 
 Update: 10/02 - Vercel offers FaaS (Functions as a Service) - Use
+NOTE: 12/02 - Opted to use regular express server and deploy to Vercel. Better debugging options and can test locally with more ease. Downside - Server will always be running even if no acitvity. 
 
 - Setting up Nodemailer for with secure password - More info available [`here`](https://stackoverflow.com/questions/72470777/nodemailer-response-535-5-7-8-username-and-password-not-accepted)
 
@@ -26,10 +27,10 @@ Update: 10/02 - Vercel offers FaaS (Functions as a Service) - Use
 
 
 <!-- DELETE THIS 10/02
-    - Refactor code to use import statements 
-    - Test if they work by running through node 
-    - Then deploy
-    - Follow this structure https://blog.logrocket.com/serverless-deployments-vercel-node-js/
+    - TRY THIS FIRST 
+        - HERE IS AN EXAMPLE OF A SERVERLESS FUNCTION IMPLEMENTATION => https://shadowsmith.com/how-to-deploy-an-express-api-to-vercel - NODE + EXPRESS ASWELL => BENEFIT => CAN TEST LOCALLY WITH node index
+
+    -BUILD A REGULAR EXPRESS APP ON A BRANCH CALLED DEPLOY, TEST LOCALLY, THEN DEPLOY TO VERCEL. HERE IS AN EXAMPLE => https://dev.to/andrewbaisden/how-to-deploy-a-node-express-app-to-vercel-2aa. 
 
  -->
 

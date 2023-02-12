@@ -1,81 +1,30 @@
-import { sendCode, verifyCode } from 'email-verification-code';
-import dotenv from 'dotenv';
+import express from 'express';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import cors from 'cors';
 
-dotenv.config();
+import emailServiceRouter from './routes/emailService.js';
 
-async function sendMailWithCode(recipient, message) {
-	try {
-		const data = {
-			smtpInfo: {
-				host: process.env.MAIL_HOST,
-				port: 465,
-				user: process.env.TEST_EMAIL_ADDRESS,
-				pass: process.env.TEST_APP_PASSWORD,
-			},
-			company: {
-				name: 'BookWorks',
-				email: process.env.TEST_EMAIL_ADDRESS,
-			},
-			mailInfo: {
-				emailReceiver: recipient,
-				subject: 'Code Confirmation',
-				text(code, token) {
-					return `${message}. The Confirmation Code is: ${code}`;
-				},
-				html(code, token) {
-					return `<p>${message}. The Confirmation Code is: ${code}</p>`;
-				},
-			},
-		};
+import { checkWhitelist } from './middlewares/checkWhitelist.js';
 
-		const sendResult = await sendCode(data);
+const app = express();
+const PORT = process.env.PORT || 5000;
 
-		console.log('sendResult', sendResult);
+app.use(express.json({ extended: false }));
+app.use(helmet());
+app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
+app.use(morgan('common'));
+app.use(cors());
+// app.use(checkWhitelist);
 
-		return {
-			data: 'Email sent successfully. Please enter your confirmation code',
-			error: null,
-		};
-	} catch (error) {
-		return {
-			data: null,
-			error: error,
-		};
-	}
-}
+// Routes
+app.use(emailServiceRouter);
 
-// (async () => {
-// 	await sendMailWithCode(
-// 		'khughessean@yahoo.com',
-// 		'Congratulations on Signing up with BookWorks! Please enter the provided code to verify your email'
-// 	);
-// })();
+// Test route
+app.get('/test-get', (req, res) => {
+	res.send('Hello from the root route. Update, Two three four ');
+});
 
-async function verifyActionCode(email, code) {
-	try {
-		const response = await verifyCode(email, code);
-
-		console.log('response', response);
-
-		if (response.error) {
-			return {
-				data: null,
-				error: response.reason,
-			};
-		}
-
-		return {
-			data: 'Code verified successfuly',
-			error: null,
-		};
-	} catch (error) {
-		return {
-			data: null,
-			error: error,
-		};
-	}
-}
-
-// (async () => {
-// 	await verifyActionCode('khughessean@yahoo.com', '385915');
-// })();
+app.listen(PORT, () => {
+	console.log(`Serving from port ${PORT}.`);
+});
