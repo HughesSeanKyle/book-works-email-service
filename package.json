@@ -4,16 +4,25 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "nodemon index.js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "MIT",
 	"dependencies": {
+<<<<<<< HEAD
 		"@vercel/node": "^2.9.2",
+=======
+		"cors": "^2.8.5",
+>>>>>>> b8d984680b0f55d5a637a176be743b634b1413d6
 		"dotenv": "^16.0.3",
 		"email-verification-code": "^2.0.4",
-		"nodemailer": "^6.9.1"
+		"express": "^4.18.2",
+		"helmet": "^6.0.1",
+		"morgan": "^1.10.0",
+		"nodemailer": "^6.9.1",
+		"nodemon": "^2.0.20"
 	},
 	"type": "module"
 }
