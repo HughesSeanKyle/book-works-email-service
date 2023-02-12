@@ -5,7 +5,7 @@ import cors from 'cors';
 
 import emailServiceRouter from './routes/emailService.js';
 
-import { checkWhitelist } from './middlewares/checkWhitelist.js';
+import { checkWhitelist } from './middleware/checkWhitelist.js';
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -25,6 +25,8 @@ app.get('/test-get', (req, res) => {
 	res.send('Hello from the root route. Update, Two three four ');
 });
 
-app.listen(PORT, () => {
-	console.log(`Serving from port ${PORT}.`);
-});
+// app.listen(PORT, () => {
+// 	console.log(`Serving from port ${PORT}.`);
+// });
+
+export default app;
