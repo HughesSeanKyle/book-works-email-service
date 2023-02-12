@@ -29,4 +29,4 @@ app.get('/test-get', (req, res) => {
 // 	console.log(`Serving from port ${PORT}.`);
 // });
 
-export default app;
+export { app };
