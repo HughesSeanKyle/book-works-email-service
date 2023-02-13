@@ -25,8 +25,8 @@ app.get('/test-get', (req, res) => {
 	res.send('Hello from the root route. Update, Two three four ');
 });
 
-// app.listen(PORT, () => {
-// 	console.log(`Serving from port ${PORT}.`);
-// });
+app.listen(PORT, () => {
+	console.log(`Serving from port ${PORT}.`);
+});
 
-export { app };
+// export { app };
