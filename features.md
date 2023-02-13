@@ -21,5 +21,7 @@ NOTE: 12/02 - Opted to use regular express server and deploy to Vercel. Better d
 - The Bookworks client side domain 
 - Local 
 
-5. May need to set CORS 
+5. May need to set CORS (DONE 13/02)
 - More info [`here`](https://vercel.com/knowledge/how-to-enable-cors?query=cors#understanding-cors)
+
+6. NOTE: Express API deployed to Render instead. 

@@ -15,7 +15,7 @@ app.use(helmet());
 app.use(helmet.crossOriginResourcePolicy({ policy: 'cross-origin' }));
 app.use(morgan('common'));
 app.use(cors());
-// app.use(checkWhitelist);
+app.use(checkWhitelist);
 
 // Routes
 app.use(emailServiceRouter);
@@ -28,5 +28,3 @@ app.get('/test-get', (req, res) => {
 app.listen(PORT, () => {
 	console.log(`Serving from port ${PORT}.`);
 });
-
-// export { app };
