@@ -1,6 +1,6 @@
 const whitelist = [
 	'http://example.com',
-	'http://localhost:3000',
+	'http://localhost:5174',
 	'http://localhost:5000',
 ];
 
