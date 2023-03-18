@@ -2,7 +2,7 @@ const whitelist = [
 	'http://example.com',
 	'http://localhost:5174',
 	'http://localhost:5000',
-	'https://bookworks-react-vite-migration.vercel.app/',
+	'https://bookworks-react-vite-migration.vercel.app',
 ];
 
 export const checkWhitelist = (req, res, next) => {
